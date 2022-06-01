@@ -4,4 +4,5 @@
 
 ## OraiDEX
 
-* [OWallet](oraidex/owallet.md)
+* [OWallet](oraidex/owallet/README.md)
+  * [OWallet Help Center](oraidex/owallet/owallet-help-center.md)
