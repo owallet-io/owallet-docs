@@ -4,7 +4,7 @@
 
 OWallet supports both Cosmos-based and EVM-based networks including Cosmos Hub, Oraichain, Osmosis, Juno, Ethereum, BSC, and more.
 
-OWallet is developed based on Keplr and MetaMask source code and currently maintained by Oraichain Labs.
+OWallet is developed based on Keplr extension and currently maintained by Oraichain Labs.
 
 ### OWallet’s key features:
 
