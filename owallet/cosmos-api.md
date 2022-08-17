@@ -193,16 +193,15 @@ It is recommended to use `verifyADR36Amino` function in the `@owallet/cosmos` pa
 ### Interaction Options
 
 ```javascript
-export interface KeplrIntereactionOptions {
-  readonly sign?: KeplrSignOptions;
+export interface OWalletIntereactionOptions {
+  readonly sign?: OWalletSignOptions;
 }
 
-export interface KeplrSignOptions {
+export interface OWalletSignOptions {
   readonly preferNoSetFee?: boolean;
   readonly preferNoSetMemo?: boolean;
 }
 ```
-OWallet v0.8.11+ offers additional options to customize interactions between the frontend website and OWallet extension.
 
 If `preferNoSetFee` is set to true, OWallet will prioritize the frontend-suggested fee rather than overriding the tx fee setting of the signing page.
 
