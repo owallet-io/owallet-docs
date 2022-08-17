@@ -1,25 +1,29 @@
 # OWallet
 
-### OWallet: Cosmos x EVM in one Wallet
+### OWallet: Cosmos x EVM in one Wallet&#x20;
 
-OWallet supports both Cosmos-based and EVM-based networks including Cosmos Hub, Oraichain, Osmosis, Juno, Ethereum, BSC, and more.
+OWallet supports both Cosmos-based and EVM-based networks including Cosmos Hub, Oraichain, Osmosis, Juno, Ethereum, BSC, and more.&#x20;
 
-OWallet is developed based on Keplr extension and currently maintained by Oraichain Labs.
+OWallet is developed based on Keplr and MetaMask source code and currently maintained by Oraichain Labs.&#x20;
 
-### OWallet’s key features:
+### OWallet’s key features:&#x20;
 
-\- Support Cosmos-based and EVM-based networks
+\- Support Cosmos-based and EVM-based networks&#x20;
 
-\- Enable IBC transfer
+\- Enable IBC transfer&#x20;
 
-\- Improved sending and receiving of CW20 (standard fungible tokens based on Cosmwasm)
+\- Improved sending and receiving of CW20 (standard fungible tokens based on Cosmwasm)&#x20;
 
-\- Compatible with Cosmwasm v1
+\- Compatible with Cosmwasm v1-beta1 & v1&#x20;
 
-OWallet source code: [https://github.com/oraichain/owallet](https://github.com/oraichain/owallet)
+\- Support Ledger (future)&#x20;
 
-Support ticket: [https://orai.io/support ](https://orai.io/support)
+\- Mobile app and Web extension (future)&#x20;
 
-OWallet website: [https://owallet.dev](https://owallet.dev/)
+OWallet source code: [https://github.com/oraichain/owallet](https://github.com/oraichain/owallet)&#x20;
+
+OWallet support channel: [https://discord.gg/wwjg2ddfzd](https://discord.gg/wwjg2ddfzd)&#x20;
+
+OWallet website: [https://owallet.dev](https://owallet.dev/)&#x20;
 
 \* You can create a pull request to add your network.
