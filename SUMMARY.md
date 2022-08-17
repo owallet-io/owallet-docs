@@ -7,5 +7,3 @@
   * [OWallet Help Center](owallet/owallet-help-center.md)
 
 ## OraiDEX
-
-* [OWallet](oraidex/owallet.md)
