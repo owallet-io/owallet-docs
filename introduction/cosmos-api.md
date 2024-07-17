@@ -1,4 +1,4 @@
-# OWallet Extension Cosmos-based APIs
+# OWallet Cosmos-based API
 
 Since OWallet Extension is based on [Keplr Wallet](https://github.com/chainapsis/keplr-wallet), its basic API & intergration method are similar to those of Keplr.
 
@@ -50,7 +50,9 @@ function getOWallet(): Promise<OWallet | undefined> {
 We share the same features as Keplr's when it comes to the Cosmos-based networks. Hence, the below documentation about the features are brought from the [Keplr Wallet documentation website](https://docs.keplr.app/api/) with slight modifications.
 
 ### Using with Typescript
+
 **`window.d.ts`**
+
 ```javascript
 import { Window as OWalletWindow } from "@owallet/types";
 
@@ -60,13 +62,14 @@ declare global {
 }
 ```
 
-The `@owallet/types` package has the type definition related to OWallet.  
-If you're using TypeScript, run `npm install --save-dev @owallet/types` or `yarn add -D @owallet/types` to install `@owallet/types`.  
+The `@owallet/types` package has the type definition related to OWallet.\
+If you're using TypeScript, run `npm install --save-dev @owallet/types` or `yarn add -D @owallet/types` to install `@owallet/types`.\
 Then, you can add the `@owallet/types` window to a global window object and register the OWallet related types.
 
 > Usage of any other packages besides @owallet/types is not recommended.
-> - Any other packages besides @owallet/types are actively being developed, backward compatibility is not in the scope of support.
-> - Since there are active changes being made, documentation is not being updated to the most recent version of the package as of right now. Documentations would be updated as packages get stable.
+>
+> * Any other packages besides @owallet/types are actively being developed, backward compatibility is not in the scope of support.
+> * Since there are active changes being made, documentation is not being updated to the most recent version of the package as of right now. Documentations would be updated as packages get stable.
 
 ### Enable Connection
 
@@ -107,8 +110,8 @@ If the webpage has permission and OWallet is unlocked, this function will return
 }
 ```
 
-It also returns the nickname for the key store currently selected, which should allow the webpage to display the current key store selected to the user in a more convenient mane.  
-`isNanoLedger` field in the return type is used to indicate whether the selected account is from the Ledger Nano. Because current Cosmos app in the Ledger Nano doesn't support the direct (protobuf) format msgs, this field can be used to select the amino or direct signer. [Ref](./cosmjs.md#types-of-offline-signers)
+It also returns the nickname for the key store currently selected, which should allow the webpage to display the current key store selected to the user in a more convenient mane.\
+`isNanoLedger` field in the return type is used to indicate whether the selected account is from the Ledger Nano. Because current Cosmos app in the Ledger Nano doesn't support the direct (protobuf) format msgs, this field can be used to select the amino or direct signer. [Ref](../owallet/cosmjs.md#types-of-offline-signers)
 
 ### Sign Amino
 
@@ -148,9 +151,7 @@ sendTx(
 ): Promise<Uint8Array>;
 ```
 
-This function requests OWallet to delegates the broadcasting of the transaction to OWallet's LCD endpoints (rather than the webpage broadcasting the transaction).
-This method returns the transaction hash if it succeeds to broadcast, if else the method will throw an error.
-When OWallet broadcasts the transaction, OWallet will send the notification on the transaction's progress.
+This function requests OWallet to delegates the broadcasting of the transaction to OWallet's LCD endpoints (rather than the webpage broadcasting the transaction). This method returns the transaction hash if it succeeds to broadcast, if else the method will throw an error. When OWallet broadcasts the transaction, OWallet will send the notification on the transaction's progress.
 
 ### Request Signature for Arbitrary Message
 
@@ -168,28 +169,29 @@ verifyArbitrary(
 ): Promise<boolean>;
 ```
 
-This is an experimental implementation of [ADR-36](https://github.com/cosmos/cosmos-sdk/blob/master/docs/architecture/adr-036-arbitrary-signature.md). Use this feature at your own risk.  
-  
-It's main usage is to prove ownership of an account off-chain, requesting ADR-36 signature using the `signArbitrary` API.  
-  
-If requested sign doc with the `signAnimo` API with the ADR-36 that OWallet requires instead of using the `signArbitary` API, it would function as `signArbitary`  
-- Only supports sign doc in the format of Amino. (in the case of protobuf, [ADR-36](https://github.com/cosmos/cosmos-sdk/blob/master/docs/architecture/adr-036-arbitrary-signature.md) requirements aren't fully specified for implementation)
-- sign doc message should be single and the message type should be "sign/MsgSignData"
-- sign doc "sign/MsgSignData" message should have "signer" and "data" as its value. "data" should be base64 encoded
-- sign doc chain_id should be an empty string("")
-- sign doc memo should be an empty string("")
-- sign doc account_number should be "0"
-- sign doc sequence should be "0"
-- sign doc fee should be `{gas: "0", amount: []}`
+This is an experimental implementation of [ADR-36](https://github.com/cosmos/cosmos-sdk/blob/master/docs/architecture/adr-036-arbitrary-signature.md). Use this feature at your own risk.
 
-When using the `signArbitrary` API, if the `data` parameter type is `string`, the signature page displays as plain text.  
-  
-Using `verifyArbitrary`, you can verify the results requested by `signArbitrary` API or `signAmino` API that has been requested with the ADR-36 spec standards.  
-  
-`verifyArbitrary` has been only implemented for simple usage. `verifyArbitrary` returns the result of the verification of the current selected account's sign doc. If the account is not the currently selected account, it would throw an error.  
-  
-It is recommended to use `verifyADR36Amino` function in the `@owallet/cosmos` package or your own implementation instead of using `verifyArbitrary` API.  
-  
+It's main usage is to prove ownership of an account off-chain, requesting ADR-36 signature using the `signArbitrary` API.
+
+If requested sign doc with the `signAnimo` API with the ADR-36 that OWallet requires instead of using the `signArbitary` API, it would function as `signArbitary`
+
+* Only supports sign doc in the format of Amino. (in the case of protobuf, [ADR-36](https://github.com/cosmos/cosmos-sdk/blob/master/docs/architecture/adr-036-arbitrary-signature.md) requirements aren't fully specified for implementation)
+* sign doc message should be single and the message type should be "sign/MsgSignData"
+* sign doc "sign/MsgSignData" message should have "signer" and "data" as its value. "data" should be base64 encoded
+* sign doc chain\_id should be an empty string("")
+* sign doc memo should be an empty string("")
+* sign doc account\_number should be "0"
+* sign doc sequence should be "0"
+* sign doc fee should be `{gas: "0", amount: []}`
+
+When using the `signArbitrary` API, if the `data` parameter type is `string`, the signature page displays as plain text.
+
+Using `verifyArbitrary`, you can verify the results requested by `signArbitrary` API or `signAmino` API that has been requested with the ADR-36 spec standards.
+
+`verifyArbitrary` has been only implemented for simple usage. `verifyArbitrary` returns the result of the verification of the current selected account's sign doc. If the account is not the currently selected account, it would throw an error.
+
+It is recommended to use `verifyADR36Amino` function in the `@owallet/cosmos` package or your own implementation instead of using `verifyArbitrary` API.
+
 ### Interaction Options
 
 ```javascript
@@ -208,6 +210,7 @@ If `preferNoSetFee` is set to true, OWallet will prioritize the frontend-suggest
 If `preferNoSetMemo` is set to true, OWallet will not override the memo and set fix memo as the front-end set memo.
 
 You can set the values as follows:
+
 ```javascript
 window.owallet.defaultOptions = {
     sign: {
@@ -242,13 +245,11 @@ Similar to how Keplr [connects with CosmJS](https://docs.keplr.app/api/cosmjs.ht
 You can get the signer via:
 
 ```javascript
-
 var offlineSigner = window.getOfflineSigner(chainId);
 // or
 var offlineSigner = await window.getOfflineSignerAuto(chainId);
 // or
 var offlineSigner = window.getOfflineSignerOnlyAmino(chainId);
-
 ```
 
 then you can pass the `offlineSigner` variable into the `SigningCosmosClient`:
@@ -384,5 +385,4 @@ await window.keplr.experimentalSuggestChain({
         "cosmwasm"
     ],
 });
-
 ```

@@ -1,10 +1,9 @@
 # Table of contents
 
-* [OWallet Introduction](README.md)
-* [OWallet](owallet/README.md)
-  * [OWallet Cosmos-based API](owallet/cosmos-api.md)
-  * [OWallet EVM-based API](owallet/evm-api.md)
-  * [OWallet Help Center](owallet/owallet-help-center.md)
+* [OWallet](README.md)
+  * [OWallet Cosmos-based API](introduction/cosmos-api.md)
+  * [OWallet EVM-based API](introduction/evm-api.md)
+  * [OWallet Help Center](introduction/owallet-help-center.md)
+* [Integration](integration.md)
 * [Download](download.md)
-
-## OraiDEX
+* [System Design](system-design.md)
