@@ -1,13 +1,11 @@
 ---
-description: >-
-  This page contains necessary information about how users can reach out to our
-  support team
+description: This page contains FAQ & contact method to our team
 ---
 
 # OWallet Help Center
 
-For technical inquiries of OWallet, please contact us via:&#x20;
+## Contact us
 
-* Email: support@orai.io
-* Ticket system: [https://orai.io/support](https://orai.io/support)&#x20;
-* Discord [https://discord.gg/JNyFnU789b](https://discord.gg/JNyFnU789b)
+For inquiries of OWallet, reach to us at [@owallet\_dev](https://x.com/owallet\_dev)
+
+## WIP - FAQ

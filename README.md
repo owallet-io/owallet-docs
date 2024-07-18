@@ -1,29 +1,31 @@
 # OWallet
 
-### OWallet: Cosmos x EVM in one Wallet&#x20;
+## Universal gateway to Web3
 
-OWallet supports both Cosmos-based and EVM-based networks including Cosmos Hub, Oraichain, Osmosis, Juno, Ethereum, BSC, and more.&#x20;
+OWallet supports all web3 activities on most common liquidity networks, which are
 
-OWallet is developed based on Keplr and MetaMask source code and currently maintained by Oraichain Labs.&#x20;
+* Bitcoin
+* EVM-based: Ethereum, BNB Chain, Oasis / Oasis Sapphire
+* Cosmos-based: Oraichain, Osmosis, Injective, Cosmos Hub...
+* TVM-based: TRON network
 
-### OWallet’s key features:&#x20;
+OWallet is forked from Keplr extension and continuously developed by Oraichain Labs.
 
-\- Support Cosmos-based and EVM-based networks&#x20;
+## OWallet’s key features
 
-\- Enable IBC transfer&#x20;
+* Supports multiple accounts Bitcoin & Cosmos-based & EVM-based networks simultaneously
+* Universal swap across various networks
+* Portfolio management with cross-chain assets: Multi accounts, Send/Recieve, Price history...
+* History of on-chain activities
+* Friendly interface on transaction confirmation
+* Future support for Ledger hardware wallets;
+* Available on mobile apps and web extensions for greater accessibility.
 
-\- Improved sending and receiving of CW20 (standard fungible tokens based on Cosmwasm)&#x20;
+## Useful links
 
-\- Compatible with Cosmwasm v1-beta1 & v1&#x20;
+Source code: [https://github.com/oraichain/owallet](https://github.com/oraichain/owallet) (You can create a pull request to add your network.)
 
-\- Support Ledger (future)&#x20;
+OWallet website: [https://owallet.dev](https://owallet.dev/)
 
-\- Mobile app and Web extension (future)&#x20;
+Contact: [https://x.com/owallet\_dev](https://x.com/owallet\_dev)
 
-OWallet source code: [https://github.com/oraichain/owallet](https://github.com/oraichain/owallet)&#x20;
-
-OWallet support channel: [https://discord.gg/wwjg2ddfzd](https://discord.gg/wwjg2ddfzd)&#x20;
-
-OWallet website: [https://owallet.dev](https://owallet.dev/)&#x20;
-
-\* You can create a pull request to add your network.

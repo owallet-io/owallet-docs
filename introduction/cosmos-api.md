@@ -1,6 +1,8 @@
 # OWallet Cosmos-based API
 
-Since OWallet Extension is based on [Keplr Wallet](https://github.com/chainapsis/keplr-wallet), its basic API & intergration method are similar to those of Keplr.
+{% hint style="info" %}
+Since OWallet Extension is forked on [Keplr Wallet](https://github.com/chainapsis/keplr-wallet), its basic API & integration methods are similar to those of Keplr.
+{% endhint %}
 
 ## How to detect OWallet Extension for Cosmos-based networks
 
@@ -332,7 +334,7 @@ the suggest chain API is:
 experimentalSuggestChain(chainInfo: SuggestingChainInfo): Promise<void>
 ```
 
-examples:
+Examples:
 
 ```javascript
 await window.keplr.experimentalSuggestChain({
